@@ -1,4 +1,4 @@
-#Course Project Code Book:
+* Course Project Code Book:
 
 Source of the original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
@@ -12,72 +12,36 @@ Reads features.txt and extracts only the measurements on the mean and standard d
 
 Reads activity_labels.txt and applies descriptive activity names to name the activities in the data set:
 
-act_id;	act_name
-1,	WALKING
-2,	WALKING_UPSTAIRS
-3,	WALKING_DOWNSTAIRS
-4,	SITTING
-5,	STANDING
-6,	LAYING
+* WALKING
+* WALKING_UPSTAIRS
+* WALKING_DOWNSTAIRS
+* SITTING
+* STANDING
+* LAYING
 
 The script also appropriately labels the data set with descriptive names: all feature names (attributes) and activity names are converted to lower case, underscores and brackets () are removed. Then it merges the 10299x66 data frame containing features with 10299x1 data frames containing activity labels and subject IDs. The result is saved as merged_clean_data.txt, a 10299x68 data frame such that the first column contains subject IDs, the second column activity names, and the last 66 columns are measurements. Subject IDs are integers between 1 and 30 inclusive. The names of the attributes are similar to the following:
 
-feat_id	feat_name
-1	1	tBodyAcc-mean()-X
-2	2	tBodyAcc-mean()-Y
-3	3	tBodyAcc-mean()-Z
-4	4	tBodyAcc-std()-X
-5	5	tBodyAcc-std()-Y
-6	6	tBodyAcc-std()-Z
-7	7	tBodyAcc-mad()-X
-8	8	tBodyAcc-mad()-Y
-9	9	tBodyAcc-mad()-Z
-10	10	tBodyAcc-max()-X
-11	11	tBodyAcc-max()-Y
-12	12	tBodyAcc-max()-Z
-13	13	tBodyAcc-min()-X
-14	14	tBodyAcc-min()-Y
-15	15	tBodyAcc-min()-Z
-16	16	tBodyAcc-sma()
-17	17	tBodyAcc-energy()-X
-18	18	tBodyAcc-energy()-Y
-19	19	tBodyAcc-energy()-Z
-20	20	tBodyAcc-iqr()-X
-21	21	tBodyAcc-iqr()-Y
-22	22	tBodyAcc-iqr()-Z
-23	23	tBodyAcc-entropy()-X
-24	24	tBodyAcc-entropy()-Y
-25	25	tBodyAcc-entropy()-Z
-26	26	tBodyAcc-arCoeff()-X,1
-27	27	tBodyAcc-arCoeff()-X,2
-28	28	tBodyAcc-arCoeff()-X,3
-29	29	tBodyAcc-arCoeff()-X,4
-30	30	tBodyAcc-arCoeff()-Y,1
-31	31	tBodyAcc-arCoeff()-Y,2
-32	32	tBodyAcc-arCoeff()-Y,3
-33	33	tBodyAcc-arCoeff()-Y,4
-34	34	tBodyAcc-arCoeff()-Z,1
-35	35	tBodyAcc-arCoeff()-Z,2
-36	36	tBodyAcc-arCoeff()-Z,3
-37	37	tBodyAcc-arCoeff()-Z,4
-38	38	tBodyAcc-correlation()-X,Y
-39	39	tBodyAcc-correlation()-X,Z
-40	40	tBodyAcc-correlation()-Y,Z
-41	41	tGravityAcc-mean()-X
-42	42	tGravityAcc-mean()-Y
-43	43	tGravityAcc-mean()-Z
-44	44	tGravityAcc-std()-X
-45	45	tGravityAcc-std()-Y
-46	46	tGravityAcc-std()-Z
-47	47	tGravityAcc-mad()-X
-48	48	tGravityAcc-mad()-Y
-49	49	tGravityAcc-mad()-Z
-50	50	tGravityAcc-max()-X
-51	51	tGravityAcc-max()-Y
-52	52	tGravityAcc-max()-Z
-53	53	tGravityAcc-min()-X
-54	54	tGravityAcc-min()-Y
-55	55	tGravityAcc-min()-Z
+
+* tBodyAcc-mean()-(X,Y,Z)
+* tBodyAcc-std()-(X,Y,Z)
+*	tBodyAcc-mad()-(X,Y,Z)
+* tBodyAcc-max()-(X,Y,Z)
+* tBodyAcc-min()-(X,Y,Z)
+*	tBodyAcc-sma()
+* tBodyAcc-energy()-(X,Y,Z)
+* tBodyAcc-iqr()-(X,Y,Z)
+*	tBodyAcc-entropy()-(X,Y,Z)
+*	tBodyAcc-arCoeff()-(X,Y,Z,1:4)
+*	tBodyAcc-correlation()-(X,Y;X,Z;Y,Z)
+* tGravityAcc-mean()-(X,Y,Z)
+* tGravityAcc-std()-(X,Y,Z)
+* tGravityAcc-mad()-(X,Y,Z)
+* tGravityAcc-max()-(X,Y,Z)
+* tGravityAcc-min()-(X,Y,Z)
+.
+.
+.
+
 56	56	tGravityAcc-sma()
 57	57	tGravityAcc-energy()-X
 58	58	tGravityAcc-energy()-Y
