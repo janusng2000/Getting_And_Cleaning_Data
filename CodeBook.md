@@ -22,57 +22,33 @@ Reads activity_labels.txt and applies descriptive activity names to name the act
 The script also appropriately labels the data set with descriptive names: all feature names (attributes) and activity names are converted to lower case, underscores and brackets () are removed. Then it merges the 10299x66 data frame containing features with 10299x1 data frames containing activity labels and subject IDs. The result is saved as merged_clean_data.txt, a 10299x68 data frame such that the first column contains subject IDs, the second column activity names, and the last 66 columns are measurements. Subject IDs are integers between 1 and 30 inclusive. The names of the attributes are similar to the following:
 
 
-* tBodyAcc-mean()-(X,Y,Z)
-* tBodyAcc-std()-(X,Y,Z)
-*	tBodyAcc-mad()-(X,Y,Z)
-* tBodyAcc-max()-(X,Y,Z)
-* tBodyAcc-min()-(X,Y,Z)
+* tBodyAcc-mean()
+* tBodyAcc-std()
+*	tBodyAcc-mad()
+* tBodyAcc-max()
+* tBodyAcc-min()
 *	tBodyAcc-sma()
-* tBodyAcc-energy()-(X,Y,Z)
-* tBodyAcc-iqr()-(X,Y,Z)
-*	tBodyAcc-entropy()-(X,Y,Z)
-*	tBodyAcc-arCoeff()-(X,Y,Z,1:4)
-*	tBodyAcc-correlation()-(X,Y;X,Z;Y,Z)
-* tGravityAcc-mean()-(X,Y,Z)
-* tGravityAcc-std()-(X,Y,Z)
-* tGravityAcc-mad()-(X,Y,Z)
-* tGravityAcc-max()-(X,Y,Z)
-* tGravityAcc-min()-(X,Y,Z)
+* tBodyAcc-energy()
+* tBodyAcc-iqr()
+*	tBodyAcc-entropy()
+*	tBodyAcc-arCoeff()
+*	tBodyAcc-correlation()
+* tGravityAcc-mean()
+* tGravityAcc-std()
+* tGravityAcc-mad()
+* tGravityAcc-max()
+* tGravityAcc-min()
+*	tGravityAcc-sma()
+* tGravityAcc-energy()
+* tGravityAcc-iqr()
+*	tGravityAcc-entropy()
+*	tGravityAcc-arCoeff()
+*	tGravityAcc-correlation()
+*	tBodyAccJerk-mean()
+*	tBodyAccJerk-std()
 .
 .
 .
-
-56	56	tGravityAcc-sma()
-57	57	tGravityAcc-energy()-X
-58	58	tGravityAcc-energy()-Y
-59	59	tGravityAcc-energy()-Z
-60	60	tGravityAcc-iqr()-X
-61	61	tGravityAcc-iqr()-Y
-62	62	tGravityAcc-iqr()-Z
-63	63	tGravityAcc-entropy()-X
-64	64	tGravityAcc-entropy()-Y
-65	65	tGravityAcc-entropy()-Z
-66	66	tGravityAcc-arCoeff()-X,1
-67	67	tGravityAcc-arCoeff()-X,2
-68	68	tGravityAcc-arCoeff()-X,3
-69	69	tGravityAcc-arCoeff()-X,4
-70	70	tGravityAcc-arCoeff()-Y,1
-71	71	tGravityAcc-arCoeff()-Y,2
-72	72	tGravityAcc-arCoeff()-Y,3
-73	73	tGravityAcc-arCoeff()-Y,4
-74	74	tGravityAcc-arCoeff()-Z,1
-75	75	tGravityAcc-arCoeff()-Z,2
-76	76	tGravityAcc-arCoeff()-Z,3
-77	77	tGravityAcc-arCoeff()-Z,4
-78	78	tGravityAcc-correlation()-X,Y
-79	79	tGravityAcc-correlation()-X,Z
-80	80	tGravityAcc-correlation()-Y,Z
-81	81	tBodyAccJerk-mean()-X
-82	82	tBodyAccJerk-mean()-Y
-83	83	tBodyAccJerk-mean()-Z
-84	84	tBodyAccJerk-std()-X
-85	85	tBodyAccJerk-std()-Y
-86	86	tBodyAccJerk-std()-Z
 87	87	tBodyAccJerk-mad()-X
 88	88	tBodyAccJerk-mad()-Y
 89	89	tBodyAccJerk-mad()-Z
