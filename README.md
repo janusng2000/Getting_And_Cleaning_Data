@@ -20,13 +20,13 @@ From the data set in step 4, creates a second, independent tidy data set with th
 #Step for How to:
 How to `run_analysis.R` implements accordingly to the project:
 
-1) Checks if the file exists, otherwise it downloads (recommanded download it manually);
-2) Checks if the file has already been extracted to the directory (You can manually unzip); 
-3) Load and read both test and train data;
-4) Load and read the features and activity labels;
-5) Extract the mean and standard deviation column names and data then process it;
-6) Merge and creates data set: 
-7) The result is saved as "./tidy-UCI-HAR-dataset-AVG.txt", a 180x68 data table (181 with column name), where as before, the first column contains subject IDs, the second column contains activity names, and then the averages for each of the 66 attributes are in columns 3 - 68. There are 30 subjects and 6 activities, thus 180 rows in this data set with averages;
-8) Review and submit your project. 
+*1) Checks if the file exists, otherwise it downloads (recommanded download it manually);
+*2) Checks if the file has already been extracted to the directory (You can manually unzip); 
+*3) Load and read both test and train data;
+*4) Load and read the features and activity labels;
+*5) Extract the mean and standard deviation column names and data then process it;
+*6) Merge and creates data set: 
+*7) The result is saved as "./tidy-UCI-HAR-dataset-AVG.txt", a 180x68 data table (181 with column name), where as before, the first column contains subject IDs, the second column contains activity names, and then the averages for each of the 66 attributes are in columns 3 - 68. There are 30 subjects and 6 activities, thus 180 rows in this data set with averages;
+*8) Review and submit your project. 
 
 #Good Luck!
